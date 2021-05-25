@@ -24,6 +24,11 @@ public class Stack<T extends Comparable<T>> {
 
     // removes the last item we have inserted O(1)
     public T pop() {
+
+        if (isEmpty()) {
+            return null;
+        }
+
         T item = head.getData();
         head = head.getNextNode();
         count--;
